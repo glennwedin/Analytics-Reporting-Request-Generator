@@ -26,6 +26,10 @@ describe("RequestGenerator", function() {
             expression: "ga:users"
         });
     });
+    it("should set a filterExpression", function () {
+        let report = reportRequests().report().filtersExpression("ga:metric2=~/v/").get();
+        expect(typeof report.reportRequests[0].filtersExpression).toBe("string");
+    })
     it("should be valid object and json", function() {
         let report = reportRequests().report().dimension("ga:superdimension", 'name').dimension("ga:superdimension2", 'name')
             .report().metric('ga:users');
