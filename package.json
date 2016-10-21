@@ -2,8 +2,13 @@
   "name": "analytics-reporting-request-generator",
   "version": "1.0.0",
   "description": "A module for generating a report request-json",
-  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "main": "./dist/requestgenerator.js",
   "scripts": {
+    "build": "babel ./src/requestgenerator --out-file ./dist/arrg.js",
     "test": "jasmine"
   },
   "author": "",
