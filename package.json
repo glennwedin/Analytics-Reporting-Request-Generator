@@ -1,7 +1,7 @@
 {
   "name": "analytics-reporting-request-generator",
   "version": "1.0.0",
-  "description": "",
+  "description": "A module for generating a report request-json",
   "main": "index.js",
   "scripts": {
     "test": "jasmine"

@@ -30,6 +30,23 @@ describe("RequestGenerator", function() {
         let report = reportRequests().report().filtersExpression("ga:metric2=~/v/").get();
         expect(typeof report.reportRequests[0].filtersExpression).toBe("string");
     })
+    it("should be a valid daterangeObject", function () {
+        let report = reportRequests().report().dateRanges("2016-04-04", "2017-05-12").dateRanges("2016-04-04", "2017-05-12").get();
+        expect(typeof report.reportRequests[0].dateRanges).toBe("object");
+        expect(typeof report.reportRequests[0].dateRanges[1]).toBe("object");
+        let names = Object.getOwnPropertyNames(report.reportRequests[0].dateRanges[1]);
+        expect(names[0]).toBe("startDate");
+        expect(names[1]).toBe("endDate");
+
+    })
+    it("sould be a valid orderobject", function () {
+        let report = reportRequests().report().orderBys("dimension32", "DESC").orderBys("dimension32", "DESC").get();
+        expect(typeof report.reportRequests[0].orderBys).toBe("object");
+        expect(typeof report.reportRequests[0].orderBys[1]).toBe("object");
+        let names = Object.getOwnPropertyNames(report.reportRequests[0].orderBys[1]);
+        expect(names[0]).toBe("fieldName");
+        expect(names[1]).toBe("sortOrder");
+    })
     it("should be valid object and json", function() {
         let report = reportRequests().report().dimension("ga:superdimension", 'name').dimension("ga:superdimension2", 'name')
             .report().metric('ga:users');
