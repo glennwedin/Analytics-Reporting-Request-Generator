@@ -7,29 +7,39 @@ Could be extended but this contains the basic stuff i needed.
 
 
 ## Methods
-  report()
+
+  **report()**
+  
     Create a new report
 
-  viewId(id)
+  **viewId(id)**
+  
     Add a Google analytics viewId for fetching data.
 
-  dimension(dimension, type) //type defaults to name
+  **dimension(dimension, type)** //type defaults to name
+  
     Add a Google analytics dimension
 
-  metric(metric, type) //type defaults to expression
+  **metric(metric, type)** //type defaults to expression
+  
     Add a Google analytics metric
 
-  filtersExpression(expression)
-    Filter the data using filtersExpression
+  **filtersExpression(expression)**
+  
+      Filter the data using filtersExpression
 
-  dateRanges(startDate, endDate) //in the ISO-date format
+  **dateRanges(startDate, endDate)** //in the ISO-date format
+  
     Add a dateStart and a dateEnd
 
-  orderBys(fieldName, sortOrder)
+  **orderBys(fieldName, sortOrder)**
+  
     Sort data by a dimension
 
-  get()
+  **get()**
+  
     Return the javascript object
 
-  getJson()
+  **getJson()**
+  
     Return a json object
