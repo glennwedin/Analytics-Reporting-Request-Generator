@@ -6,7 +6,7 @@
     "type": "git",
     "url": "https://github.com/glennwedin/Analytics-Reporting-Request-Generator/"
   },
-  "main": "./dist/requestgenerator.js",
+  "main": "./dist/arrg.js",
   "scripts": {
     "build": "npm test && babel ./src/requestgenerator.js | uglifyjs --compress -o ./dist/arrg.js",
     "test": "jasmine"
