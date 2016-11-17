@@ -29,7 +29,7 @@ request = requestsGen().report().viewId('12345678').dimension('ga:dimension1').m
 
   **filtersExpression(expression)**
 
-      Filter the data using filtersExpression
+    Filter the data using filtersExpression
 
   **dateRanges(startDate, endDate)** //in the ISO-date format
 
