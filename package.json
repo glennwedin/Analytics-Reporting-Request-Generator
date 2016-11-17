@@ -1,6 +1,6 @@
 {
   "name": "analytics-reporting-request-generator",
-  "version": "1.0.0b",
+  "version": "1.0.0",
   "description": "A module for generating a report request-json",
   "repository": {
     "type": "git",
