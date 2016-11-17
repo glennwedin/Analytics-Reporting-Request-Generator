@@ -9,9 +9,10 @@
   "main": "./dist/arrg.js",
   "scripts": {
     "build": "npm test && babel ./src/requestgenerator.js | uglifyjs --compress -o ./dist/arrg.js",
-    "test": "jasmine"
+    "test": "jasmine",
+    "prepublish": "npm run build"
   },
-  "author": "",
+  "author": "Glenn Wedin",
   "license": "MIT",
   "devDependencies": {
     "babel-cli": "^6.16.0",
